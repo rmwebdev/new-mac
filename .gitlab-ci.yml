@@ -1,0 +1,29 @@
+stages:
+  - release
+  - deploy
+
+release-staging:
+  stage: release
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  only:
+    refs:
+      - master
+  script:
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $CI_REGISTRY_IMAGE:$STAGING_CONTAINER_TAG
+
+deploy-staging:
+  stage: deploy
+  image: morkid/ssh-client
+  script:
+    - cp "$STAGING_KEY" ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+    - ssh -p $STAGING_PORT $STAGING_SERVER "docker pull $REGISTRY_PATH:$STAGING_CONTAINER_TAG"
+    - ssh -p $STAGING_PORT $STAGING_SERVER "docker stop $STAGING_CONTAINER"
+    - ssh -p $STAGING_PORT $STAGING_SERVER "docker rm $STAGING_CONTAINER"
+    - ssh -p $STAGING_PORT $STAGING_SERVER "docker run -p $STAGING_APP_PORT:80 -d --name $STAGING_CONTAINER $REGISTRY_PATH:$STAGING_CONTAINER_TAG"
+  needs: ["release-staging"]
+  only:
+    refs:
+      - master
