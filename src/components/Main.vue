@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="row justify-center mt-6 sm:mt-32 pb-10 z-0"
+      class="row justify-center mt-8 sm:mt-32 pb-10 z-0"
       style="background-color:"
     >
       <div class="column">

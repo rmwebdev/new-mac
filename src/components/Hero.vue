@@ -5,7 +5,7 @@
       <q-img
         no-spinner
         src="~/assets/images/bg_hero_dekstop_img.png "
-        class="w-full h-full"
+        class="w-full h-full overflow-visible"
       >
         <div class="bg-transparent w-full h-full column justify-between">
           <div class="col-1"></div>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-3 self-end">
                   <q-img
-                    class="w-[103%] mt-[-70px] md:mt-[-110px] xl:mt-[-130px]"
+                    class="w-[100%] md:w-[110%] h-[100%] mt-[-70px] md:mt-[-110px] xl:mt-[-130px]"
                     no-spinner
                     src="~/assets/images/vend_img.png"
                   />
