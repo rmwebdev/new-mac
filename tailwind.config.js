@@ -1,28 +1,12 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html'],
+  content: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    // screens: {
-
-    //   // sm: '480',
-    //   // md: '768',
-    //   'xs': '475px',
-    //   ...defaultTheme.screens,
-      
-    // },
     extend: {
       colors: {
-      primary: 'rgba(18, 73, 129, 1)',
-      hoverslide:'rgba(188, 160, 90, 0.2)'
-      },
-      fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-      },
-      letterSpacing: {
-        widest: '.3em',
+        primaryColor: "#12467f",
       },
     },
   },
   plugins: [],
-  important: '#app',
-}
+};
