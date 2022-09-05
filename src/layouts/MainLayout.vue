@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-header">
+    <!-- <q-header class="bg-header">
       <q-toolbar class="justify-between sm:px-20">
         <div class="cursor-pointer">
           <q-img
@@ -59,7 +59,7 @@
           </div>
         </div>
       </q-toolbar>
-    </q-header>
+    </q-header> -->
 
     <q-page-container>
       <router-view />
