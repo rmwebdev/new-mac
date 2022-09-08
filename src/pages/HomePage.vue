@@ -1,11 +1,6 @@
 <template>
   <q-layout>
-    <!-- <q-page-container> -->
       <q-page>
-        <!-- <div class="fixed-center" v-if="isLoad">
-          <q-spinner-gears size="80px" color="primary" />
-        </div>
-        <div v-show="!isLoad"> -->
           <q-header class="bg-header">
             <q-toolbar class="justify-between sm:px-20">
               <div class="cursor-pointer">
@@ -18,20 +13,25 @@
 
               <div class="row q-gutter-x-sm">
                 <div class="row self-center q-gutter-x-sm !hidden sm:!flex">
-                  <q-btn dense outline round color="white">
+                  <a href="" target="_blank">
+                    <q-btn dense outline round color="white">
                     <img
                       no-spinner
                       src="~/assets/icons/facebook_icon.svg"
                       class="w-3 h-5"
                     />
                   </q-btn>
-                  <q-btn dense outline round color="white">
-                    <img
-                      no-spinner
-                      src="~/assets/icons/twitter_icon.svg"
-                      class="w-4 h-4"
-                    />
-                  </q-btn>
+                  </a>
+                  <a href="" target="_blank">
+                     <q-btn dense outline round color="white">
+                        <img
+                          no-spinner
+                          src="~/assets/icons/twitter_icon.svg"
+                          class="w-4 h-4"
+                        />
+                      </q-btn>
+                  </a>
+                 <a href="" target="_blank">
                   <q-btn dense outline round color="white">
                     <img
                       no-spinner
@@ -39,6 +39,8 @@
                       class="w-5 h-3"
                     />
                   </q-btn>
+                  </a>
+                  <a href="" target="_blank">
                   <q-btn dense outline round color="white">
                     <img
                       no-spinner
@@ -46,8 +48,9 @@
                       class="w-4 h-4"
                     />
                   </q-btn>
+                  </a>
                 </div>
-                <div class="self-center !hidden sm:!flex">
+                <!-- <div class="self-center !hidden sm:!flex">
                   <q-btn-dropdown
                     class="btn--no-hover"
                     text-color="white"
@@ -56,12 +59,14 @@
                     dense
                     label="ID"
                   ></q-btn-dropdown>
-                </div>
+                </div> -->
                 <div
                   class="rounded-full q-px-md q-py-xs cursor-pointer self-center"
                   style="color: #124981; background-color: #ffffff; font-weight: 600"
                 >
+                 <a href="" target="_blank">
                   Kontak kami
+                 </a>
                 </div>
               </div>
             </q-toolbar>
@@ -73,9 +78,7 @@
           <portofolio-component />
           <testi-component />
           <footer-component />
-        <!-- </div> -->
       </q-page>
-    <!-- </q-page-container> -->
   </q-layout>
 </template>
 
