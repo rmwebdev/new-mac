@@ -1,6 +1,9 @@
-# Quasar App (monster-mac)
+# Monster MAC Landing Page
 
-A Quasar Project
+Monster MAC Project
+
+
+## ![alt text](https://lab.tog.co.id/tog.hiero/monster-mac/-/raw/master/thumb.png)
 
 ## Install the dependencies
 ```bash
