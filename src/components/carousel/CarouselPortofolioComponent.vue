@@ -1,25 +1,28 @@
 <template>
   <div class="w-full" v-if="portofolio_lists != null">
+    <!-- <q-scroll-observer @scroll="onScroll" /> -->
+
     <Carousel
       :itemsToShow="1.5"
       :wrapAround="false"
       v-model="carousel_is_active"
-      :mouseDrag="false"
+      :mouseDrag="true"
+      id="Slider"
     >
       <Slide
         style="height: 400px"
         class="col-10 rounded-xl q-px-lg"
         v-for="(item, index) in portofolio_lists"
-        :key="item"
+        :key="index"
       >
         <q-img
           style="border-radius: 10px"
           class="w-full h-full"
           no-spinner
-          src="~/assets/images/bg_kfc_img.png"
+          :src="item.bg_img"
         >
           <div class="row w-full h-full self-center bg-transparent">
-            <div class="col-1 self-center">
+            <div class="col-1 self-center"  @click="prev()">
               <q-btn
                 v-if="index == carousel_is_active && index != 0"
                 @click="prev()"
@@ -33,34 +36,14 @@
             <div class="col row justify-center self-center">
               <img
                 no-spinner
-                src="~/assets/images/kfc_img.png"
+                :src="item.icon"
                 style="width: 60%; height: 60%"
               />
             </div>
             <div class="col-6 column self-center q-px-md">
-              <div
-                class="text-xl text-left"
-                style="color: #ffffff; font-weight: 700"
-              >
-                {{ item.title }}
-              </div>
-              <div
-                class="text-lg mt-8 text-left"
-                style="color: #ffffff; font-weight: 600"
-              >
-                Fitur
-              </div>
-
-              <div
-                v-for="fitur in item.fitur_lists"
-                :key="fitur"
-                class="text-base mt-2 text-left"
-                style="color: #ffffff; font-weight: 400"
-              >
-                • {{ fitur.description }}
-              </div>
+              <q-img :src="item.svg" fit="contain-" class="mb-2"></q-img>
             </div>
-            <div class="col-1 self-center">
+            <div class="col-1 self-center"  @click="next()">
               <q-btn
                 v-if="
                   index == carousel_is_active &&
@@ -106,8 +89,16 @@ export default {
     prev() {
       this.carousel_is_active--;
     },
+    // onScroll (info) {
+    //   if(info.direction === "down" && info.position.top > 1500){
+    //     document.location
+    //     }
+    // },
   },
-  mounted() {},
+  async mounted() {
+  //  await this.next()
+  //  await this.prev()
+  },
 };
 </script>
 

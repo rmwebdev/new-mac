@@ -36,23 +36,23 @@ export default {
             "Membantu sekali saat stock minuman habis! Saya jual kopi tapi retail tetap laku jadi win-win solution buat saya.",
         },
         {
-          person_name: "Farel",
-          person_status: "Pemilik vending machine di Cafe Biru",
+          person_name: "Lestari",
+          person_status: "Store Manager Graphia",
           message:
-            "Membantu sekali saat stock minuman habis! Saya jual kopi tapi retail tetap laku jadi win-win solution buat saya.",
+            "CS Monster Mac ramah sekali, kami diarahkan dengan seksama. Tak perlu menunggu waktu lama, begitu pesan langsung direspon!",
         },
         {
-          person_name: "Dio",
-          person_status: "Pemilik vending machine di Cafe Biru",
+          person_name: "Dito",
+          person_status: "Staff Logistik Amuba",
           message:
-            "Membantu sekali saat stock minuman habis! Saya jual kopi tapi retail tetap laku jadi win-win solution buat saya.",
+            "CS Monster Mac ramah sekali, kami diarahkan dengan seksama. Tak perlu menunggu waktu lama, begitu pesan langsung direspon!",
         },
-        {
-          person_name: "Neo",
-          person_status: "Pemilik vending machine di Cafe Biru",
-          message:
-            "Membantu sekali saat stock minuman habis! Saya jual kopi tapi retail tetap laku jadi win-win solution buat saya.",
-        },
+        // {
+        //   person_name: "Neo",
+        //   person_status: "Pemilik vending machine di Cafe Biru",
+        //   message:
+        //     "Membantu sekali saat stock minuman habis! Saya jual kopi tapi retail tetap laku jadi win-win solution buat saya.",
+        // },
       ],
     };
   },

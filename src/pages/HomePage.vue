@@ -11,46 +11,8 @@
                 />
               </div>
 
-              <div class="row q-gutter-x-sm">
-                <div class="row self-center q-gutter-x-sm !hidden sm:!flex">
-                  <a href="" target="_blank">
-                    <q-btn dense outline round color="white">
-                    <img
-                      no-spinner
-                      src="~/assets/icons/facebook_icon.svg"
-                      class="w-3 h-5"
-                    />
-                  </q-btn>
-                  </a>
-                  <a href="" target="_blank">
-                     <q-btn dense outline round color="white">
-                        <img
-                          no-spinner
-                          src="~/assets/icons/twitter_icon.svg"
-                          class="w-4 h-4"
-                        />
-                      </q-btn>
-                  </a>
-                 <a href="" target="_blank">
-                  <q-btn dense outline round color="white">
-                    <img
-                      no-spinner
-                      src="~/assets/icons/youtube_icon.svg"
-                      class="w-5 h-3"
-                    />
-                  </q-btn>
-                  </a>
-                  <a href="" target="_blank">
-                  <q-btn dense outline round color="white">
-                    <img
-                      no-spinner
-                      src="~/assets/icons/instagram_icon.svg"
-                      class="w-4 h-4"
-                    />
-                  </q-btn>
-                  </a>
-                </div>
-                <!-- <div class="self-center !hidden sm:!flex">
+              <div class="row q-gutter-x">
+                <div class="self-center !hidden sm:!flex">
                   <q-btn-dropdown
                     class="btn--no-hover"
                     text-color="white"
@@ -59,12 +21,12 @@
                     dense
                     label="ID"
                   ></q-btn-dropdown>
-                </div> -->
+                </div>
                 <div
                   class="rounded-full q-px-md q-py-xs cursor-pointer self-center"
                   style="color: #124981; background-color: #ffffff; font-weight: 600"
                 >
-                 <a href="" target="_blank">
+                 <a href="https://web.whatsapp.com/send?phone=6281315009788" target="_blank">
                   Kontak kami
                  </a>
                 </div>
