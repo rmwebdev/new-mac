@@ -19,14 +19,14 @@
         v-for="item in feature_lists"
         :key="item"
       >
-        <div class="row justify-center">
+        <!-- <div class="row justify-center">
           <div
             class="text-center q-px-md q-py-xs rounded-full text-base"
             style="border: solid 1px #576170; font-weight: 600"
           >
             {{ item.category }}
           </div>
-        </div>
+        </div> -->
         <div
           class="mt-5 rounded-xl q-pa-md"
           style="border: solid 1px #c5c5c5; font-weight: 600"

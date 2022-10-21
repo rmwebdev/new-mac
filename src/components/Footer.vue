@@ -20,7 +20,9 @@
         class="rounded-full q-px-md q-py-xs md:py-2 md:px-5 cursor-pointer self-center"
         style="color: #ffffff; background-color: #124981; font-weight: 600"
       >
-        Kontak kami
+      <a href="https://web.whatsapp.com/send?phone=6281315009788" target="_blank">
+                  Kontak kami
+                 </a>
       </div>
     </div>
     <!-- Dekstop -->
