@@ -3,11 +3,10 @@
     <!-- <q-scroll-observer @scroll="onScroll" /> -->
 
     <Carousel
-      :itemsToShow="1.5"
-      :wrapAround="false"
-      v-model="carousel_is_active"
-      :mouseDrag="true"
-      id="Slider"
+        :mouseDrag="false"
+        :itemsToShow="2"
+        :wrapAround="false"
+        v-model="carousel_is_active"
     >
       <Slide
         style="height: 400px"
@@ -65,7 +64,7 @@
 </template>
 
 <script>
-import { Carousel, Pagination, Slide, Navigation } from "vue3-carousel";
+import { Carousel, Pagination, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 
 export default {
@@ -89,16 +88,8 @@ export default {
     prev() {
       this.carousel_is_active--;
     },
-    // onScroll (info) {
-    //   if(info.direction === "down" && info.position.top > 1500){
-    //     document.location
-    //     }
-    // },
   },
-  async mounted() {
-  //  await this.next()
-  //  await this.prev()
-  },
+  async mounted() {  },
 };
 </script>
 
