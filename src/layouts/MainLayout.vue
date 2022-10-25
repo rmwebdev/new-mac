@@ -8,6 +8,8 @@
 
 <script>
 import { defineComponent, ref } from "vue";
+import { Carousel, Pagination, Slide, Navigation } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
   name: "MainLayout",
