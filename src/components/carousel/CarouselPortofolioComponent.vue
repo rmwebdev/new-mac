@@ -34,7 +34,7 @@
               <img
                 no-spinner
                 :src="item.icon"
-                style="width: 60%; height: 60%"
+                style="width: 90%; height: 60%"
               />
             </div>
             <div class="col-6 column self-center q-px-md">
