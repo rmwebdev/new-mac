@@ -1,12 +1,10 @@
 <template>
   <div class="w-full" v-if="portofolio_lists != null">
-    <!-- <q-scroll-observer @scroll="onScroll" /> -->
-
     <Carousel
-        :mouseDrag="false"
-        :itemsToShow="2"
-        :wrapAround="false"
-        v-model="carousel_is_active"
+      :mouseDrag="false"
+      :itemsToShow="2"
+      :wrapAround="false"
+      ref="carouselRef"
     >
       <Slide
         style="height: 400px"
@@ -21,7 +19,7 @@
           :src="item.bg_img"
         >
           <div class="row w-full h-full self-center bg-transparent">
-            <div class="col-1 self-center"  @click="prev()">
+            <div class="col-1 self-center">
               <q-btn
                 v-if="index == carousel_is_active && index != 0"
                 @click="prev()"
@@ -42,7 +40,7 @@
             <div class="col-6 column self-center q-px-md">
               <q-img :src="item.svg" fit="contain-" class="mb-2"></q-img>
             </div>
-            <div class="col-1 self-center"  @click="next()">
+            <div class="col-1 self-center">
               <q-btn
                 v-if="
                   index == carousel_is_active &&
@@ -83,33 +81,18 @@ export default {
   },
   methods: {
     next() {
+      this.$refs.carouselRef.restartCarousel();
+      this.$refs.carouselRef.next();
       this.carousel_is_active++;
     },
     prev() {
+      this.$refs.carouselRef.restartCarousel();
+      this.$refs.carouselRef.prev();
       this.carousel_is_active--;
     },
   },
-  async mounted() {  },
+  async mounted() {},
 };
 </script>
 
-<style scoped>
-.carousel__slide > .carousel__item {
-  transform: scale(1);
-  opacity: 0.5;
-  transition: 0.5s;
-}
-.carousel__slide--visible > .carousel__item {
-  opacity: 1;
-  transform: rotateY(0);
-}
-.carousel__slide--next > .carousel__item {
-  transform: scale(0.9) translate(-10px);
-}
-.carousel__slide--prev > .carousel__item {
-  transform: scale(0.9) translate(10px);
-}
-.carousel__slide--active > .carousel__item {
-  transform: scale(1.1);
-}
-</style>
+<style scoped></style>
