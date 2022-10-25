@@ -40,6 +40,17 @@
           <portofolio-component />
           <testi-component />
           <footer-component />
+           <q-page-sticky position="bottom-right" :offset="[20, 20]" style="z-index:99">
+          <a href="https://web.whatsapp.com/send?phone=6281315009788">
+            <q-btn round flat dense>
+            <q-img
+              class="w-[9vw] sm:w-[6vw] md:w-[4vw] lg:w-[3vw]"
+              no-spinner
+              src="~/assets/icons/wa-logo.png"
+            ></q-img>
+          </q-btn>
+          </a>
+        </q-page-sticky>
       </q-page>
   </q-layout>
 </template>
