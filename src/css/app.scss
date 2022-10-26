@@ -6,6 +6,26 @@ body {
     font-family: "Poppins", sans-serif;
     color: rgb(44, 44, 44);
 }
+@media screen and (max-width: 320px) {
+
+   body{
+    font-size: 10px;
+   } 
+
+   .vending__image{
+    margin-top: -5rem !important;
+   }
+   .vending__text{
+    margin-top: -1rem !important;
+   }
+   .vending__p{
+    margin-top: -0rem !important;
+   }
+   
+   .mobile__text {
+    font-size:8px !important;
+   }
+}
 
 a {
     text-decoration: none;
