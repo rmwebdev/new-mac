@@ -63,7 +63,7 @@
       >
         <div class="column q-px-md q-pt-xl bg-transparent">
           <div
-            class="row text-center text-lg font-medium justify-center"
+            class="row text-center text-lg font-medium justify-center mt-8"
             style="color: #ffffff; font-weight: 500"
           >
             Smart Vending Machine <br />

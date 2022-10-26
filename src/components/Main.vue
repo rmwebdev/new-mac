@@ -18,7 +18,7 @@
           untuk Segala Sektor
         </div>
         <!-- Mobile -->
-        <div class="column mt-5 q-gutter-y-md !flex sm:!hidden mobile__text">
+        <div class="column mt-5 q-gutter-y-md !flex sm:!hidden">
           <div
             class="rounded-sm w-[90%] p-4 mt-4 m-auto"
             style="border-radius: 15px; border: solid 1px #c5c5c5"
