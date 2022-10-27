@@ -20,7 +20,7 @@
         class="rounded-full q-px-md q-py-xs md:py-2 md:px-5 cursor-pointer self-center"
         style="color: #ffffff; background-color: #124981; font-weight: 600"
       >
-      <a href="https://web.whatsapp.com/send?phone=6281315009788" target="_blank">
+      <a href="#"  @click="sendWA()">
                   Kontak kami
                  </a>
       </div>
@@ -94,6 +94,12 @@
 
 <script>
 export default {
+  props:{
+    message:{
+      type :String,
+      default:''
+    }
+  },
   data() {
     return {};
   },
@@ -106,6 +112,9 @@ export default {
         behavior: "smooth",
       });
     },
+    async sendWA(){
+       window.open(`https://web.whatsapp.com/send?phone=6281315009788&text=${decodeURI(this.message)}`, '_blank');
+    }
   },
 };
 </script>

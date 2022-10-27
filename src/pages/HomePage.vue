@@ -26,7 +26,7 @@
                   class="rounded-full q-px-md q-py-xs cursor-pointer self-center"
                   style="color: #124981; background-color: #ffffff; font-weight: 600"
                 >
-                 <a href="https://web.whatsapp.com/send?phone=6281315009788" target="_blank">
+                <a href="#"  @click="sendWA()">
                   Kontak kami
                  </a>
                 </div>
@@ -39,9 +39,8 @@
           <feature-component />
           <portofolio-component />
           <testi-component />
-          <footer-component />
-           <q-page-sticky position="bottom-right" :offset="[20, 20]" style="z-index:99">
-          <a href="https://web.whatsapp.com/send?phone=6281315009788">
+          <footer-component :message="message"  />
+           <q-page-sticky position="bottom-right" :offset="[20, 20]" style="z-index:99" @click="sendWA()">
             <q-btn round flat dense>
             <q-img
               class="w-[9vw] sm:w-[6vw] md:w-[4vw] lg:w-[3vw]"
@@ -49,7 +48,6 @@
               src="~/assets/icons/wa-logo.png"
             ></q-img>
           </q-btn>
-          </a>
         </q-page-sticky>
       </q-page>
   </q-layout>
@@ -76,6 +74,7 @@ export default {
   data() {
     return {
       isLoad: true,
+      message: "Kami hadir untuk anda "
     };
   },
   mounted() {
@@ -87,6 +86,9 @@ export default {
     loadingPage() {
       this.isLoad = false;
     },
+    async sendWA(){
+       window.open(`https://web.whatsapp.com/send?phone=6281315009788&text=${decodeURI(this.message)}`, '_blank');
+    }
   },
 };
 </script>
