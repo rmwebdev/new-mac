@@ -40,14 +40,15 @@
           <portofolio-component />
           <testi-component />
           <footer-component :message="message"  />
-           <q-page-sticky position="bottom-right" :offset="[20, 20]" style="z-index:99" @click="sendWA()">
-            <q-btn round flat dense>
+           <q-page-sticky position="bottom-right" :offset="[20, 20]" style="z-index:99; margin:5px !important;" @click="sendWA()">
+              <!-- class="w-[9vw] sm:w-[6vw] md:w-[4vw] lg:w-[3vw]" -->
+            <!-- <q-btn round flat dense> -->
             <q-img
-              class="w-[9vw] sm:w-[6vw] md:w-[4vw] lg:w-[3vw]"
+              class="w-52 !sm:w-52"
               no-spinner
-              src="~/assets/icons/wa-logo.png"
+              src="~/assets/icons/wa-02.png"
             ></q-img>
-          </q-btn>
+          <!-- </q-btn> -->
         </q-page-sticky>
       </q-page>
   </q-layout>
@@ -74,7 +75,7 @@ export default {
   data() {
     return {
       isLoad: true,
-      message: `Halo MonsterMAC, bisa bantu saya?%0aNama Perusahaan:%0aNama pribadi:%0aEmail:%0aKeperluan:`
+      message: `Hai MONSTERMAC!%0aNama pribadi:%0aNama Perusahaan:%0aEmail:%0aKeperluan:`
     };
   },
   mounted() {
